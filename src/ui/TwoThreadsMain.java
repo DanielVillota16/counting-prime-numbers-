@@ -12,13 +12,10 @@ public class TwoThreadsMain {
 		CountingPrimeNumbersThread ct2 = new CountingPrimeNumbersThread(cpn2);
 		
 		long st = System.currentTimeMillis();
-		
-		ct1.run();
-		ct2.run();
-		
+		ct1.start();
+		ct2.start();
 		ct1.join();
 		ct2.join();
-		
 		long et = System.currentTimeMillis();
 		
 		int output= cpn1.getTotal();

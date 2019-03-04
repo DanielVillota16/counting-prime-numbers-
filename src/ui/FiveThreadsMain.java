@@ -18,13 +18,11 @@ public class FiveThreadsMain {
 		CountingPrimeNumbersThread ct5 = new CountingPrimeNumbersThread(cpn5);
 		
 		long st = System.currentTimeMillis();
-		
-		ct1.run();
-		ct2.run();
-		ct3.run();
-		ct4.run();
-		ct5.run();
-		
+		ct1.start();
+		ct2.start();
+		ct3.start();
+		ct4.start();
+		ct5.start();
 		ct1.join();
 		ct2.join();
 		ct3.join();
